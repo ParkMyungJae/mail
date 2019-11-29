@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="reAnchorPane" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ReceiveMailController">
+   <children>
+      <Pane prefHeight="750.0" prefWidth="263.0" style="-fx-background-color: #A4BADE;">
+         <children>
+            <Button fx:id="receiveMailBtn" alignment="CENTER" layoutX="43.0" layoutY="297.0" mnemonicParsing="false" onAction="#receiveMail" prefHeight="48.0" prefWidth="178.0" text="받은메일함" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="sendMailBtn" alignment="CENTER" layoutX="43.0" layoutY="362.0" mnemonicParsing="false" onAction="#sendMail" prefHeight="48.0" prefWidth="178.0" text="보낸메일함" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="43.0" layoutY="427.0" mnemonicParsing="false" onAction="#myMail" prefHeight="48.0" prefWidth="178.0" text="내게쓴메일함" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="43.0" layoutY="493.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" text="제작자-박명재" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="32.0" layoutY="22.0">
+               <image>
+                  <Image url="@../../../../../../../Users/박명재/Desktop/avatar+person+profile+user+icon-1320166578424287581.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextArea fx:id="userInfo" blendMode="DARKEN" editable="false" focusTraversable="false" layoutX="490.0" layoutY="17.0" prefHeight="40.0" prefWidth="530.0" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+      <Button alignment="CENTER" layoutX="1045.0" layoutY="17.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="100.0" text="로그아웃" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-success" />
+         </styleClass>
+      </Button>
+      <Label alignment="CENTER" layoutX="643.0" layoutY="87.0" prefHeight="54.0" prefWidth="178.0" text="받은메일함" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="263.0" layoutY="206.0" onMouseClicked="#select" prefHeight="544.0" prefWidth="937.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="88.0" text="메일 번호" />
+            <TableColumn fx:id="ownerColumn" prefWidth="165.0" text="보낸 사람" />
+            <TableColumn fx:id="titleColumn" prefWidth="575.0" text="제목" />
+            <TableColumn fx:id="dateColumn" prefWidth="108.0" text="날짜" />
+         </columns>
+      </TableView>
+      <Button alignment="CENTER" layoutX="1089.0" layoutY="155.0" mnemonicParsing="false" onAction="#writeMail" prefHeight="40.0" prefWidth="80.0" text="메일 쓰기">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-success" />
+         </styleClass>
+      </Button>
+      <Button alignment="CENTER" layoutX="990.0" layoutY="155.0" mnemonicParsing="false" onAction="#unitDelete" prefHeight="40.0" prefWidth="80.0" text="삭제">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-danger" />
+         </styleClass>
+      </Button>
+      <Button alignment="CENTER" layoutX="881.0" layoutY="155.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="100.0" text="메일함 비우기">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-green" />
+         </styleClass>
+      </Button>
+      <Button alignment="CENTER" layoutX="791.0" layoutY="155.0" mnemonicParsing="false" onAction="#reload" prefHeight="40.0" prefWidth="80.0" text="새로고침">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <styleClass>
+            <String fx:value="btn" />
+            <String fx:value="btn-danger" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

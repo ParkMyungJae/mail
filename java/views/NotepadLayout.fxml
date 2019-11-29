@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="writeMail" prefHeight="750.0" prefWidth="1200.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.WriteMailController">
+   <children>
+      <Pane prefHeight="58.0" prefWidth="1200.0" style="-fx-background-color: #A4BADE;">
+         <children>
+            <Button fx:id="sendBtn" layoutX="1043.0" layoutY="9.0" mnemonicParsing="false" onAction="#send" prefHeight="40.0" prefWidth="100.0" text="보내기">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-success" />
+               </styleClass>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="5.0" prefHeight="48.0" prefWidth="178.0" text="더퍼니잇 메일">
+               <font>
+                  <Font name="Consolas" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="userInfo" layoutX="459.0" layoutY="22.0" text="환영합니다 qkraudwo0109@naver.com (박명재님)" />
+            <Button layoutX="936.0" layoutY="9.0" mnemonicParsing="false" onAction="#receiveMail" prefHeight="40.0" prefWidth="100.0" text="취소">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-success" />
+               </styleClass>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutY="3.0" prefHeight="755.0" prefWidth="263.0" style="-fx-background-color: #A4BADE;">
+         <children>
+            <Button fx:id="receiveMailBtn" alignment="CENTER" layoutX="43.0" layoutY="297.0" mnemonicParsing="false" onAction="#receiveMail" prefHeight="48.0" prefWidth="178.0" text="받은메일함" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="43.0" layoutY="362.0" mnemonicParsing="false" onAction="#sendMail" prefHeight="48.0" prefWidth="178.0" text="보낸메일함" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="43.0" layoutY="427.0" mnemonicParsing="false" onAction="#myMail" prefHeight="48.0" prefWidth="178.0" text="내게쓴메일함" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button alignment="CENTER" layoutX="43.0" layoutY="493.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="178.0" text="제작자-박명재" textAlignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="32.0" layoutY="22.0">
+               <image>
+                  <Image url="@../../../../../../../Users/박명재/Desktop/avatar+person+profile+user+icon-1320166578424287581.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <HTMLEditor fx:id="content" focusTraversable="false" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="263.0" layoutY="275.0" prefHeight="480.0" prefWidth="937.0" />
+      <TextField fx:id="receive" layoutX="421.0" layoutY="115.0" prefHeight="30.0" prefWidth="700.0" />
+      <TextField fx:id="title" layoutX="421.0" layoutY="177.0" prefHeight="30.0" prefWidth="700.0" />
+      <Label alignment="CENTER" layoutX="320.0" layoutY="115.0" prefHeight="30.0" prefWidth="76.0" text="받는사람" />
+      <Label alignment="CENTER" layoutX="320.0" layoutY="177.0" prefHeight="30.0" prefWidth="76.0" text="제목" />
+   </children>
+</AnchorPane>
